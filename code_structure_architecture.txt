@@ -1,0 +1,48 @@
+// Importing required modules from tech_stack.txt
+const express = require('express');
+const mongoose = require('mongoose');
+
+// Importing schemas from data_storage_management.txt
+const UserSchema = require('./data_storage_management').UserSchema;
+const MessageSchema = require('./data_storage_management').MessageSchema;
+
+// Creating an instance of express
+const app = express();
+
+// Defining the Model
+const User = mongoose.model('User', UserSchema);
+const Message = mongoose.model('Message', MessageSchema);
+
+// Defining the Controller
+const UserController = {
+  create: (req, res) => {
+    const user = new User(req.body);
+    user.save((err, user) => {
+      if (err) return res.status(500).send(err);
+      return res.status(200).send(user);
+    });
+  },
+  // Other controller methods like update, delete, get can be defined here
+};
+
+const MessageController = {
+  create: (req, res) => {
+    const message = new Message(req.body);
+    message.save((err, message) => {
+      if (err) return res.status(500).send(err);
+      return res.status(200).send(message);
+    });
+  },
+  // Other controller methods like update, delete, get can be defined here
+};
+
+// Defining the View (Routes)
+app.post('/user', UserController.create);
+app.post('/message', MessageController.create);
+
+// Other routes for update, delete, get can be defined here
+
+// Starting the server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
