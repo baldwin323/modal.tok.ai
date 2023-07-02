@@ -1,0 +1,96 @@
+# .gitignore
+
+# Ignore configuration files that may contain sensitive information
+src/config.py
+
+# Ignore all __pycache__ directories
+**/__pycache__
+
+# Ignore all .pyc, .pyo and .pyd files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore all log files
+*.log
+
+# Ignore database file if it's SQLite
+*.db
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore the build directory
+build/
+
+# Ignore dist directory
+dist/
+
+# Ignore all .egg-info directories
+*.egg-info/
+
+# Ignore all .egg directories
+*.egg/
+
+# Ignore all .so files
+*.so
+
+# Ignore all .o files
+*.o
+
+# Ignore all .a files
+*.a
+
+# Ignore all .dll files
+*.dll
+
+# Ignore all .swp files
+*.swp
+
+# Ignore all .swo files
+*.swo
+
+# Ignore all .swn files
+*.swn
+
+# Ignore all .sow files
+*.sow
+
+# Ignore all .sou files
+*.sou
+
+# Ignore all .pid files
+*.pid
+
+# Ignore all .lock files
+*.lock
+
+# Ignore all .spec files
+*.spec
+
+# Ignore all .secrets files
+*.secrets
+
+# Ignore all .DS_Store files
+*.DS_Store
+
+# Ignore all .env files
+*.env
+
+# Ignore all .coverage files
+*.coverage
+
+# Ignore all .cache directories
+*.cache/
+
+# Ignore all .pytest_cache directories
+*.pytest_cache/
+
+# Ignore all .vscode directories
+*.vscode/
+
+# Ignore all .idea directories
+*.idea/
+
+# Ignore all .ropeproject directories
+*.ropeproject/
