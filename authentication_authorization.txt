@@ -1,0 +1,56 @@
+```javascript
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('./data_storage_management').UserSchema;
+
+const register = async (username, password) => {
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
+
+  const user = new User({
+    username,
+    password: hashedPassword
+  });
+
+  await user.save();
+};
+
+const login = async (username, password) => {
+  const user = await User.findOne({ username });
+
+  if (!user) {
+    throw new Error('Invalid username or password');
+  }
+
+  const validPassword = await bcrypt.compare(password, user.password);
+
+  if (!validPassword) {
+    throw new Error('Invalid username or password');
+  }
+
+  const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+  return token;
+};
+
+const socialMediaLogin = async (socialMediaId, socialMediaName) => {
+  const user = await User.findOne({ socialMediaId, socialMediaName });
+
+  if (!user) {
+    const newUser = new User({
+      socialMediaId,
+      socialMediaName
+    });
+
+    await newUser.save();
+  }
+
+  const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
+  return token;
+};
+
+module.exports = {
+  register,
+  login,
+  socialMediaLogin
+};
+```

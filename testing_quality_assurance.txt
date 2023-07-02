@@ -1,0 +1,68 @@
+// Importing required libraries
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../server');
+const should = chai.should();
+
+chai.use(chaiHttp);
+
+// Unit Test
+describe('Unit Test for User Registration', () => {
+  it('it should register a user', (done) => {
+    let user = {
+      name: 'Test User',
+      email: 'testuser@gmail.com',
+      password: 'password'
+    }
+    chai.request(server)
+      .post('/authentication_authorization/register')
+      .send(user)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.be.a('object');
+        done();
+      });
+  });
+});
+
+// Integration Test
+describe('Integration Test for User Login', () => {
+  it('it should login a user', (done) => {
+    let user = {
+      email: 'testuser@gmail.com',
+      password: 'password'
+    }
+    chai.request(server)
+      .post('/authentication_authorization/login')
+      .send(user)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.be.a('object');
+        done();
+      });
+  });
+});
+
+// End-to-End Test
+describe('End-to-End Test for User Profile', () => {
+  it('it should get user profile', (done) => {
+    let user = {
+      email: 'testuser@gmail.com',
+      password: 'password'
+    }
+    chai.request(server)
+      .post('/authentication_authorization/login')
+      .send(user)
+      .end((err, res) => {
+        let token = res.body.token;
+        chai.request(server)
+          .get('/ui_ux_guidelines/userProfile')
+          .set('Authorization', `Bearer ${token}`)
+          .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            done();
+          });
+      });
+  });
+});

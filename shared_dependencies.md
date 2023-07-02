@@ -1,21 +1,19 @@
 Shared Dependencies:
 
-1. User Model: This is a data schema that will be shared across all modules. It will contain fields like username, password, email, and other personal information.
+1. "tech_stack": This file will contain the names of the programming languages, frameworks, libraries, and databases used across all other files. For example, "React", "Node.js", "MongoDB".
 
-2. Session Data: This will be shared across all modules to keep track of the logged-in user. It will include fields like session_id, user_id, and login_timestamp.
+2. "code_structure_architecture": This file will define the architectural patterns used across the app, such as "MVC", "MVVM". These patterns will be used in other files to structure the code.
 
-3. API Credentials: These will be used in the API Integration Module, OpenAI Integration, and Payment Gateway Integration. They will include fields like api_key, api_secret, and access_token.
+3. "data_storage_management": This file will define the data schemas used across the app, such as "UserSchema", "MessageSchema". These schemas will be used in other files for data storage and management.
 
-4. DOM Elements: These will be used in the Messaging System and Creator Profile Management. They will include ids like message_input, send_button, profile_form, and save_button.
+4. "authentication_authorization": This file will define the authentication and authorization methods used across the app, such as "login", "register", "socialMediaLogin". These methods will be used in other files for user authentication and authorization.
 
-5. Message Schema: This will be used in the Messaging System. It will include fields like message_id, sender_id, receiver_id, and message_content.
+5. "api_integration": This file will contain the names of the third-party APIs used across the app, such as "OnlyFansAPI", "TwitterAPI", "StripeAPI". These APIs will be used in other files for integration.
 
-6. Transaction Schema: This will be used in the Payment Gateway Integration. It will include fields like transaction_id, user_id, product_id, and amount.
+6. "ui_ux_guidelines": This file will define the id names of DOM elements used across the app, such as "loginButton", "registerForm", "userProfile". These id names will be used in other files for UI/UX interactions.
 
-7. Function Names: These will be shared across all modules. They will include functions like login(), signup(), sendMessage(), receiveMessage(), processTransaction(), and updateProfile().
+7. "error_handling_logging": This file will define the error messages and logging methods used across the app, such as "handleError", "logError". These methods will be used in other files for error handling and logging.
 
-8. Social Media Handles: These will be used in the Creator Profile Management and API Integration Module. They will include fields like twitter_handle, instagram_handle, and onlyfans_handle.
+8. "performance_optimization": This file will define the performance optimization methods used across the app, such as "minimizeLoadTime", "optimizeImage", "implementCaching". These methods will be used in other files for performance optimization.
 
-9. OpenAI Model: This will be used in the OpenAI Integration. It will include fields like model_id, model_name, and model_parameters.
-
-10. Payment Details: These will be used in the Payment Gateway Integration. They will include fields like card_number, expiry_date, cvv, and card_holder_name.
+9. "testing_quality_assurance": This file will define the testing methods and tools used across the app, such as "unitTest", "integrationTest", "endToEndTest". These methods will be used in other files for testing and quality assurance.
