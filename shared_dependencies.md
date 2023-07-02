@@ -1,25 +1,21 @@
-1. **React**: All the `.tsx` files share the dependency on the React library for creating the user interface.
+Shared Dependencies:
 
-2. **Firebase**: The `firebase.ts` file exports the Firebase configuration and initialization, which is used in `auth.ts` for user authentication. Firebase is also used in `Login.tsx`, `SignUp.tsx`, and `Logout.tsx` components for user authentication operations.
+1. User Model: This is a data schema that will be shared across all modules. It will contain fields like username, password, email, and other personal information.
 
-3. **Auth Service**: The `auth.ts` file exports functions for user authentication operations (like login, signup, logout) which are used in `Login.tsx`, `SignUp.tsx`, and `Logout.tsx` components.
+2. Session Data: This will be shared across all modules to keep track of the logged-in user. It will include fields like session_id, user_id, and login_timestamp.
 
-4. **PrivateRoute Component**: The `PrivateRoute.tsx` component is used in `App.tsx` to protect routes that require authentication.
+3. API Credentials: These will be used in the API Integration Module, OpenAI Integration, and Payment Gateway Integration. They will include fields like api_key, api_secret, and access_token.
 
-5. **CSS Styles**: The `global.css` file is imported in `index.tsx` and individual CSS files (`Login.css`, `SignUp.css`, `Home.css`) are imported in their respective components.
+4. DOM Elements: These will be used in the Messaging System and Creator Profile Management. They will include ids like message_input, send_button, profile_form, and save_button.
 
-6. **DOM Elements**: The `id` names of DOM elements in `Login.tsx`, `SignUp.tsx`, and `Home.tsx` (like form fields, buttons) are used in their respective component files for handling user interactions.
+5. Message Schema: This will be used in the Messaging System. It will include fields like message_id, sender_id, receiver_id, and message_content.
 
-7. **Types**: The `index.ts` file in the `types` directory exports the TypeScript interfaces and types used across the application.
+6. Transaction Schema: This will be used in the Payment Gateway Integration. It will include fields like transaction_id, user_id, product_id, and amount.
 
-8. **Environment Variables**: The `.env` file contains environment variables (like Firebase configuration) which are used in `firebase.ts`.
+7. Function Names: These will be shared across all modules. They will include functions like login(), signup(), sendMessage(), receiveMessage(), processTransaction(), and updateProfile().
 
-9. **Package.json**: This file contains the list of all the dependencies shared across the application.
+8. Social Media Handles: These will be used in the Creator Profile Management and API Integration Module. They will include fields like twitter_handle, instagram_handle, and onlyfans_handle.
 
-10. **tsconfig.json**: This file contains the TypeScript configuration used across the application.
+9. OpenAI Model: This will be used in the OpenAI Integration. It will include fields like model_id, model_name, and model_parameters.
 
-11. **Public Assets**: The `index.html`, `favicon.ico`, and `manifest.json` in the `public` directory are used across the application.
-
-12. **README.md**: This file contains the documentation of the application which is shared across the project.
-
-13. **.gitignore**: This file contains the list of files and directories that are ignored by Git, which is shared across the project.
+10. Payment Details: These will be used in the Payment Gateway Integration. They will include fields like card_number, expiry_date, cvv, and card_holder_name.
