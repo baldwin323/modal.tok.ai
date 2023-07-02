@@ -1,19 +1,13 @@
-Shared Dependencies:
+The shared dependencies between "merge_commits.py" and "generate_readme.py" could include:
 
-1. "tech_stack": This file will contain the names of the programming languages, frameworks, libraries, and databases used across all other files. For example, "React", "Node.js", "MongoDB".
+1. GitPython: This is a Python library used to interact with Git repositories. Both scripts would need this to interact with the repository, merge commits, and generate a readme based on the commit history.
 
-2. "code_structure_architecture": This file will define the architectural patterns used across the app, such as "MVC", "MVVM". These patterns will be used in other files to structure the code.
+2. Repository Path: This is a shared variable that represents the path to the local Git repository. Both scripts would need this to know where to operate.
 
-3. "data_storage_management": This file will define the data schemas used across the app, such as "UserSchema", "MessageSchema". These schemas will be used in other files for data storage and management.
+3. Commit History: This is a shared data schema that represents the history of commits in the repository. The "merge_commits.py" script would generate this after merging all commits, and the "generate_readme.py" script would use this to generate the readme.
 
-4. "authentication_authorization": This file will define the authentication and authorization methods used across the app, such as "login", "register", "socialMediaLogin". These methods will be used in other files for user authentication and authorization.
+4. README File Path: This is a shared variable that represents the path to the readme file in the local repository. The "generate_readme.py" script would need this to know where to write the readme.
 
-5. "api_integration": This file will contain the names of the third-party APIs used across the app, such as "OnlyFansAPI", "TwitterAPI", "StripeAPI". These APIs will be used in other files for integration.
+5. Merge Function: This is a shared function that merges all commits in the repository. It would be defined in "merge_commits.py" and used in "generate_readme.py" to ensure that all commits are merged before the readme is generated.
 
-6. "ui_ux_guidelines": This file will define the id names of DOM elements used across the app, such as "loginButton", "registerForm", "userProfile". These id names will be used in other files for UI/UX interactions.
-
-7. "error_handling_logging": This file will define the error messages and logging methods used across the app, such as "handleError", "logError". These methods will be used in other files for error handling and logging.
-
-8. "performance_optimization": This file will define the performance optimization methods used across the app, such as "minimizeLoadTime", "optimizeImage", "implementCaching". These methods will be used in other files for performance optimization.
-
-9. "testing_quality_assurance": This file will define the testing methods and tools used across the app, such as "unitTest", "integrationTest", "endToEndTest". These methods will be used in other files for testing and quality assurance.
+6. Generate Readme Function: This is a shared function that generates a readme based on the commit history. It would be defined in "generate_readme.py" and used in "merge_commits.py" to generate the readme after all commits are merged.
