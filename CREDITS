@@ -1,0 +1,22 @@
+Model Talk AI is built using the following technologies and libraries:
+
+- Python: Programming language used for the application development.
+- OpenAI: API used for personality cloning and natural language processing.
+- NLTK or spaCy: Libraries for advanced natural language processing.
+- Social Media APIs: Kik API, Telegram Bot API, Instagram Graph API, and Facebook Messenger Platform.
+- Other dependencies: Listed in the requirements.txt file.
+
+This project also integrates with the optional OnlyFans affiliate API for tracking referrals and crediting promotional efforts, and it offers a flexible payment system for creators to monetize their content.
+
+The user interface is designed to be sleek and intuitive, providing creators with a smooth and enjoyable experience. The UI design emphasizes simplicity, innovation, and ease of use, setting it apart from traditional messaging apps.
+
+We would like to acknowledge the following individuals and teams for their contributions to this project:
+
+- The Python community for developing and maintaining the Python programming language.
+- The OpenAI team for providing the API used for personality cloning and natural language processing.
+- The developers of NLTK and spaCy for creating powerful libraries for advanced natural language processing.
+- The teams at Kik, Telegram, Instagram, and Facebook for developing and maintaining their respective APIs.
+- The OnlyFans team for providing the affiliate API used in this project.
+- All contributors who have submitted pull requests to improve this project.
+
+For inquiries, feedback, or support, please reach out to our team at contact@modeltalkai.com.
