@@ -1,0 +1,55 @@
+# .gitignore
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore test artifacts
+tests/__pycache__/
+tests/*.py[cod]
+tests/*.pyo
+tests/*.pyd
+
+# Ignore Python environment files
+*.venv
+*.pyenv
+*.env
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.db
+
+# Ignore OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
